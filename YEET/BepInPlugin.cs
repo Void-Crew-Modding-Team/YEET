@@ -3,13 +3,13 @@ using BepInEx.Logging;
 using HarmonyLib;
 using System.Reflection;
 
-namespace Yeet
+namespace YEET
 {
     internal static class MyPluginInfo
     {
         internal const string PLUGIN_GUID = "id107.yeet";
-        internal const string PLUGIN_NAME = "Yeet";
-        internal const string PLUGIN_VERSION = "0.0.0";
+        internal const string PLUGIN_NAME = "YEET";
+        internal const string PLUGIN_VERSION = "0.0.1";
     }
 
     [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
@@ -22,6 +22,7 @@ namespace Yeet
         {
             Log = Logger;
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID);
+            Configs.Load(this);
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         }
     }

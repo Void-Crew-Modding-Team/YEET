@@ -1,6 +1,6 @@
 ﻿using VoidManager.MPModChecks;
 
-namespace Yeet
+namespace YEET
 {
     public class VoidManagerPlugin : VoidManager.VoidPlugin
     {
